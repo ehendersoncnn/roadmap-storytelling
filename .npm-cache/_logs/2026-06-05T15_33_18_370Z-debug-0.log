@@ -1,0 +1,48 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.12.1
+2 info using node@v24.15.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/ehenderson/Desktop/roadmap-storytelling/roadmap-storytelling/.npmrc
+5 silly config load:file:/Users/ehenderson/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install @cnnprivate/cnn-vossi-styles@4.0.0
+8 verbose argv "install" "@cnnprivate/cnn-vossi-styles@4.0.0" "--cache" "/Users/ehenderson/Desktop/roadmap-storytelling/roadmap-storytelling/.npm-cache"
+9 verbose logfile logs-max:10 dir:/Users/ehenderson/Desktop/roadmap-storytelling/roadmap-storytelling/.npm-cache/_logs/2026-06-05T15_33_18_370Z-
+10 verbose logfile /Users/ehenderson/Desktop/roadmap-storytelling/roadmap-storytelling/.npm-cache/_logs/2026-06-05T15_33_18_370Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 silly idealTree buildDeps
+15 silly fetch manifest @cnnprivate/cnn-vossi-styles@4.0.0
+16 silly packumentCache full:https://registry.npmjs.org/@cnnprivate%2fcnn-vossi-styles cache-miss
+17 http fetch GET 404 https://registry.npmjs.org/@cnnprivate%2fcnn-vossi-styles 416ms (cache skip)
+18 silly placeDep ROOT @cnnprivate/cnn-vossi-styles@ REPLACE for: starter-nextjs-cursor-template@0.1.0 want: 4.0.0
+19 verbose stack HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.org/@cnnprivate%2fcnn-vossi-styles - Not found
+19 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/check-response.js:103:15
+19 verbose stack     at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+19 verbose stack     at async RegistryFetcher.packument (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:90:19)
+19 verbose stack     at async RegistryFetcher.manifest (/usr/local/lib/node_modules/npm/node_modules/pacote/lib/registry.js:128:23)
+19 verbose stack     at async #fetchManifest (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1227:20)
+19 verbose stack     at async #nodeFromEdge (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1061:19)
+19 verbose stack     at async #buildDepStep (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:917:11)
+19 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:170:7)
+19 verbose stack     at async Promise.all (index 1)
+19 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:111:5)
+20 verbose statusCode 404
+21 verbose pkgid @cnnprivate/cnn-vossi-styles@4.0.0
+22 error code E404
+23 error 404 Not Found - GET https://registry.npmjs.org/@cnnprivate%2fcnn-vossi-styles - Not found
+24 error 404
+25 error 404  The requested resource '@cnnprivate/cnn-vossi-styles@4.0.0' could not be found or you do not have permission to access it.
+26 error 404
+27 error 404 Note that you can also install from a
+28 error 404 tarball, folder, http url, or git url.
+29 silly unfinished npm timer reify 1780673598462
+30 silly unfinished npm timer reify:loadTrees 1780673598463
+31 verbose cwd /Users/ehenderson/Desktop/roadmap-storytelling/roadmap-storytelling
+32 verbose os Darwin 24.6.0
+33 verbose node v24.15.0
+34 verbose npm  v11.12.1
+35 verbose exit 1
+36 verbose code 1
+37 error A complete log of this run can be found in: /Users/ehenderson/Desktop/roadmap-storytelling/roadmap-storytelling/.npm-cache/_logs/2026-06-05T15_33_18_370Z-debug-0.log
