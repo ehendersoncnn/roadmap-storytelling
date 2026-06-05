@@ -1,26 +1,233 @@
+@import "@cnnprivate/cnn-vossi-styles/variables.primitive.css";
+@import "@cnnprivate/cnn-vossi-styles/variables.semantic.css";
+@import "@cnnprivate/cnn-vossi-styles/variables.theme-default--light.css";
+
 @import "tailwindcss";
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS
+   Light mode defaults. Dark mode overrides follow below.
+   Mapped to Vossi primitive + semantic tokens (v4.0.0).
+───────────────────────────────────────────────────────────────────────────── */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surface */
+  --background: var(--semantic-color-bg-primary);
+  --surface: var(--semantic-color-bg-secondary);
+  --surface-raised: var(--semantic-color-bg-primary);
+  --foreground: var(--semantic-color-type-primary);
+  --foreground-muted: var(--semantic-color-type-secondary);
+  --foreground-subtle: var(--semantic-color-type-tertiary);
+  --border: var(--semantic-color-border-quartenary);
+  --border-strong: var(--semantic-color-border-tertiary);
+
+  /* Tag: DISCOVERY */
+  --tag-discovery-bg: var(--primitive-color-neutral-300);
+  --tag-discovery-text: var(--primitive-color-neutral-700);
+  --tag-discovery-border: var(--primitive-color-neutral-500);
+
+  /* Tag: SPIKE */
+  --tag-spike-bg: var(--primitive-color-purple-100);
+  --tag-spike-text: var(--primitive-color-purple-700);
+  --tag-spike-border: var(--primitive-color-purple-300);
+
+  /* Tag: BUILD */
+  --tag-build-bg: var(--primitive-color-blue-100);
+  --tag-build-text: var(--primitive-color-blue-700);
+  --tag-build-border: var(--primitive-color-blue-300);
+
+  /* Tag: TEST */
+  --tag-test-bg: var(--primitive-color-yellow-100);
+  --tag-test-text: var(--primitive-color-yellow-800);
+  --tag-test-border: var(--primitive-color-yellow-400);
+
+  /* Tag: SCALE */
+  --tag-scale-bg: var(--primitive-color-green-100);
+  --tag-scale-text: var(--primitive-color-green-800);
+  --tag-scale-border: var(--primitive-color-green-400);
+
+  /* Priority */
+  --priority-p1-bg: var(--primitive-color-red-100);
+  --priority-p1-text: var(--primitive-color-red-800);
+  --priority-p1-border: var(--primitive-color-red-400);
+
+  --priority-p2-bg: var(--primitive-color-yellow-100);
+  --priority-p2-text: var(--primitive-color-yellow-800);
+  --priority-p2-border: var(--primitive-color-yellow-400);
+
+  --priority-p3-bg: var(--primitive-color-neutral-200);
+  --priority-p3-text: var(--primitive-color-neutral-600);
+  --priority-p3-border: var(--primitive-color-neutral-400);
+
+  /* Swimlane header fills */
+  --swimlane-1: var(--primitive-color-red-400);
+  --swimlane-1-text: var(--primitive-color-neutral-100);
+  --swimlane-2: var(--primitive-color-purple-400);
+  --swimlane-2-text: var(--primitive-color-neutral-100);
+  --swimlane-3: var(--primitive-color-blue-400);
+  --swimlane-3-text: var(--primitive-color-neutral-100);
+  --swimlane-4: var(--primitive-color-green-400);
+  --swimlane-4-text: var(--primitive-color-neutral-100);
+  --swimlane-5: var(--primitive-color-orange-400);
+  --swimlane-5-text: var(--primitive-color-neutral-100);
+  --swimlane-6: var(--primitive-color-yellow-300);
+  --swimlane-6-text: var(--primitive-color-neutral-800);
 }
 
+/* ── Dark mode ─────────────────────────────────────────────────────────────── */
+.dark {
+  @import "@cnnprivate/cnn-vossi-styles/variables.theme-default--dark.css";
+
+  color-scheme: dark;
+
+  --semantic-color-type-primary: var(--theme-semantic-color-type-primary);
+  --semantic-color-type-secondary: var(--theme-semantic-color-type-secondary);
+  --semantic-color-type-tertiary: var(--theme-semantic-color-type-tertiary);
+  --semantic-color-type-quartenary: var(--theme-semantic-color-type-quartenary);
+  --semantic-color-bg-primary: var(--theme-semantic-color-bg-primary);
+  --semantic-color-bg-secondary: var(--theme-semantic-color-bg-secondary);
+  --semantic-color-bg-tertiary: var(--theme-semantic-color-bg-tertiary);
+  --semantic-color-border-quinary: var(--theme-semantic-color-border-quinary);
+  --semantic-color-border-quartenary: var(--theme-semantic-color-border-quartenary);
+  --semantic-color-border-tertiary: var(--theme-semantic-color-border-tertiary);
+  --semantic-color-border-accent: var(--theme-semantic-color-border-accent);
+
+  /* Surface hierarchy — unified page chrome */
+  --background: #0a0a0a;
+  --surface: #0a0a0a;
+  --surface-raised: #0f0f0f;
+  --foreground: #e8e8e8;
+  --foreground-muted: #a0a0a0;
+  --foreground-subtle: #6e6e6e;
+  --border: #2a2a2a;
+  --border-strong: #383838;
+
+  /* Tag badges — mid-range tones, readable without glowing */
+  --tag-discovery-bg: #2a2a28;
+  --tag-discovery-text: #a8a6a0;
+  --tag-discovery-border: #4a4844;
+
+  --tag-spike-bg: #2e2850;
+  --tag-spike-text: #b0a8d8;
+  --tag-spike-border: #504888;
+
+  --tag-build-bg: #1a3050;
+  --tag-build-text: #98b8d8;
+  --tag-build-border: #2a5080;
+
+  --tag-test-bg: #3d3018;
+  --tag-test-text: #d4b878;
+  --tag-test-border: #6b5520;
+
+  --tag-scale-bg: #1e3d28;
+  --tag-scale-text: #98c8a8;
+  --tag-scale-border: #2e5838;
+
+  /* Priority badges */
+  --priority-p1-bg: #3d2020;
+  --priority-p1-text: #d89898;
+  --priority-p1-border: #6b3030;
+
+  --priority-p2-bg: #3d3018;
+  --priority-p2-text: #d4b878;
+  --priority-p2-border: #6b5520;
+
+  --priority-p3-bg: #2a2a28;
+  --priority-p3-text: #a8a6a0;
+  --priority-p3-border: #4a4844;
+
+  /* Swimlane headers — desaturated, darkened light-mode hues */
+  --swimlane-1: #6b3030;
+  --swimlane-1-text: #e8b4b4;
+  --swimlane-2: #4a3560;
+  --swimlane-2-text: #c9b8e0;
+  --swimlane-3: #1e4a6e;
+  --swimlane-3-text: #a8d4f0;
+  --swimlane-4: #2a5c3a;
+  --swimlane-4-text: #b0e0c0;
+  --swimlane-5: #6b4020;
+  --swimlane-5-text: #f0c8a8;
+  --swimlane-6: #5c4a18;
+  --swimlane-6-text: #e8d898;
+}
+
+/* ── Tailwind v4 theme extension ───────────────────────────────────────────── */
 @theme inline {
+  --font-sans: var(--primitive-type-font-family-cnn-sans-display);
+
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  /* Tags */
+  --color-tag-discovery-bg: var(--tag-discovery-bg);
+  --color-tag-discovery-text: var(--tag-discovery-text);
+  --color-tag-discovery-border: var(--tag-discovery-border);
+  --color-tag-spike-bg: var(--tag-spike-bg);
+  --color-tag-spike-text: var(--tag-spike-text);
+  --color-tag-spike-border: var(--tag-spike-border);
+  --color-tag-build-bg: var(--tag-build-bg);
+  --color-tag-build-text: var(--tag-build-text);
+  --color-tag-build-border: var(--tag-build-border);
+  --color-tag-test-bg: var(--tag-test-bg);
+  --color-tag-test-text: var(--tag-test-text);
+  --color-tag-test-border: var(--tag-test-border);
+  --color-tag-scale-bg: var(--tag-scale-bg);
+  --color-tag-scale-text: var(--tag-scale-text);
+  --color-tag-scale-border: var(--tag-scale-border);
+
+  /* Priorities */
+  --color-priority-p1-bg: var(--priority-p1-bg);
+  --color-priority-p1-text: var(--priority-p1-text);
+  --color-priority-p1-border: var(--priority-p1-border);
+  --color-priority-p2-bg: var(--priority-p2-bg);
+  --color-priority-p2-text: var(--priority-p2-text);
+  --color-priority-p2-border: var(--priority-p2-border);
+  --color-priority-p3-bg: var(--priority-p3-bg);
+  --color-priority-p3-text: var(--priority-p3-text);
+  --color-priority-p3-border: var(--priority-p3-border);
+
+  /* Swimlanes */
+  --color-swimlane-1: var(--swimlane-1);
+  --color-swimlane-1-text: var(--swimlane-1-text);
+  --color-swimlane-2: var(--swimlane-2);
+  --color-swimlane-2-text: var(--swimlane-2-text);
+  --color-swimlane-3: var(--swimlane-3);
+  --color-swimlane-3-text: var(--swimlane-3-text);
+  --color-swimlane-4: var(--swimlane-4);
+  --color-swimlane-4-text: var(--swimlane-4-text);
+  --color-swimlane-5: var(--swimlane-5);
+  --color-swimlane-5-text: var(--swimlane-5-text);
+  --color-swimlane-6: var(--swimlane-6);
+  --color-swimlane-6-text: var(--swimlane-6-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* WCAG AA focus — 2px foreground ring on background offset */
+@layer utilities {
+  .focus-ring {
+    outline: none;
+  }
+
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--foreground);
+    outline-offset: 2px;
+  }
 }
