@@ -1,7 +1,5 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  transpilePackages: ["@cnnprivate/cnn-vossi-styles"],
-};
+const nextConfig: NextConfig = {};
 
 export default nextConfig;

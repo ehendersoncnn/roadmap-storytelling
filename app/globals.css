@@ -1,6 +1,4 @@
-@import "@cnnprivate/cnn-vossi-styles/variables.primitive.css";
-@import "@cnnprivate/cnn-vossi-styles/variables.semantic.css";
-@import "@cnnprivate/cnn-vossi-styles/variables.theme-default--light.css";
+@import "./styles/vossi-tokens.css";
 
 @import "tailwindcss";
 
@@ -76,8 +74,6 @@
 
 /* ── Dark mode ─────────────────────────────────────────────────────────────── */
 .dark {
-  @import "@cnnprivate/cnn-vossi-styles/variables.theme-default--dark.css";
-
   color-scheme: dark;
 
   --semantic-color-type-primary: var(--theme-semantic-color-type-primary);
